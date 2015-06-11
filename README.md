@@ -1,5 +1,6 @@
 # RatingBar
 ##android中一个评分的控件
+![image](https://github.com/hedge-hog/RatingBar/blob/master/ic_demo.png)
 # 如何使用
 ###1，在XML中
     <com.hedgehog.ratingbar.RatingBar
