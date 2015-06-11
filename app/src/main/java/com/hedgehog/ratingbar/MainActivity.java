@@ -16,7 +16,7 @@ public class MainActivity extends ActionBarActivity {
                 new RatingBar.OnRatingListener() {
                     @Override
                     public void onRating(Object bindObject, int RatingCount) {
-                        Toast.makeText(MainActivity.this,"选中的是"+RatingCount+"颗星星",Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this,"fill start is"+RatingCount,Toast.LENGTH_LONG).show();
                     }
                 }
         );

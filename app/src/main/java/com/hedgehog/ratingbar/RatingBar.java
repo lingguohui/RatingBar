@@ -67,7 +67,6 @@ public class RatingBar extends LinearLayout {
         starCount = mTypedArray.getInteger(R.styleable.RatingBar_starCount, 5);
         starEmptyDrawable = mTypedArray.getDrawable(R.styleable.RatingBar_starEmpty);
         starFillDrawable = mTypedArray.getDrawable(R.styleable.RatingBar_starFill);
-//      试试看这里可以吗？
         mClickable = mTypedArray.getBoolean(1,false);
         for (int i = 0; i < starCount; ++i) {
             ImageView imageView = getStarImageView(context, attrs);
@@ -110,7 +109,7 @@ public class RatingBar extends LinearLayout {
     }
 
     /**
-     * 设置star的方法
+     * setting start
      *
      * @param starCount
      */
@@ -129,7 +128,7 @@ public class RatingBar extends LinearLayout {
 
 
     /**
-     * star改变的监听器
+     * change stat listener
      */
     public interface OnRatingListener {
 
