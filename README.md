@@ -19,7 +19,8 @@
 ###注意：别忘了命名空间
 
 ###2，在java代码中
-RatingBar mRatingBar= (RatingBar) findViewById(R.id.ratingbar);
+
+        RatingBar mRatingBar= (RatingBar) findViewById(R.id.ratingbar);
         mRatingBar.setOnRatingListener(
                 new RatingBar.OnRatingListener() {
                     @Override
