@@ -1,5 +1,6 @@
 # RatingBar
 ##android中一个评分的控件
+![image](https://github.com/hedge-hog/RatingBar/blob/master/ic_demo.png)
 # 如何使用
 ###1，在XML中
     <com.hedgehog.ratingbar.RatingBar
@@ -18,7 +19,8 @@
 ###注意：别忘了命名空间
 
 ###2，在java代码中
-RatingBar mRatingBar= (RatingBar) findViewById(R.id.ratingbar);
+
+        RatingBar mRatingBar= (RatingBar) findViewById(R.id.ratingbar);
         mRatingBar.setOnRatingListener(
                 new RatingBar.OnRatingListener() {
                     @Override
