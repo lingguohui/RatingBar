@@ -1,5 +1,5 @@
 # RatingBar
-android中一个评分的控件
+##android中一个评分的控件
 # 如何使用
 ###1，在XML中
     <com.hedgehog.ratingbar.RatingBar
