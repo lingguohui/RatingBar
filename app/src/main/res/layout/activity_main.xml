@@ -1,0 +1,50 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hedgehog="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.hedgehog.ratingbar.RatingBar
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:id="@+id/ratingbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        hedgehog:starCount="5"
+        hedgehog:clickable="true"
+        hedgehog:starEmpty="@mipmap/ic_star_empty"
+        hedgehog:starFill="@mipmap/ic_star_fill"
+        hedgehog:starImageSize="30dp"
+        />
+    <com.hedgehog.ratingbar.RatingBar
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:id="@+id/ratingbar_love"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        hedgehog:starCount="5"
+        hedgehog:clickable="true"
+        hedgehog:starEmpty="@mipmap/ic_love_empty"
+        hedgehog:starFill="@mipmap/ic_love_fill"
+        hedgehog:starImageSize="30dp"
+        />
+    <com.hedgehog.ratingbar.RatingBar
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:id="@+id/ratingbar_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        hedgehog:starCount="5"
+        hedgehog:clickable="true"
+        hedgehog:starEmpty="@mipmap/ic_home_empty"
+        hedgehog:starFill="@mipmap/ic_home_fill"
+        hedgehog:starImageSize="30dp"
+        />
+
+</LinearLayout>

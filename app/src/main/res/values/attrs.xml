@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RatingBar">
+        <!--尺寸值-->
+        <attr name="starImageSize" format="dimension"/>
+        <attr name="starCount" format="integer"/>
+        <!--资源文件值-->
+        <attr name="starEmpty" format="reference"/>
+        <!--资源文件值-->
+        <attr name="starFill" format="reference"/>
+        <!--boolean值-->
+        <attr name="clickable" format="boolean"/>
+    </declare-styleable>
+</resources>
