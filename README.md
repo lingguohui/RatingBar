@@ -3,11 +3,13 @@
 ![image](https://github.com/hedge-hog/RatingBar/blob/master/ic_demo.png)
 # 如何使用
 ###Android Studio下：
-dependencies {
-    compile 'com.hedgehog.ratingbar:app:1.0.2'
-}
-
+```groovy
+    dependencies {
+        compile 'com.hedgehog.ratingbar:app:1.0.2'
+    }
+```
 ###1，在XML中
+
     <com.hedgehog.ratingbar.RatingBar
         android:layout_marginTop="50dp"
         android:layout_gravity="center"
@@ -22,9 +24,9 @@ dependencies {
         hedgehog:starImageSize="30dp"
         />
 ###注意：别忘了命名空间
-
- xmlns:hedgehog="http://schemas.android.com/apk/res-auto"
- 
+```
+    xmlns:hedgehog="http://schemas.android.com/apk/res-auto"
+```
 ###2，在java代码中
 
        RatingBar mRatingBar = (RatingBar) findViewById(R.id.ratingbar);
