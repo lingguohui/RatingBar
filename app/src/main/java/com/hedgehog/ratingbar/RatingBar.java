@@ -9,29 +9,19 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Created by hedge_hog on 2015/6/11.
  */
 public class RatingBar extends LinearLayout {
     private boolean mClickable;
     private int starCount;
-    private List<ImageView> mStars = new ArrayList<ImageView>();
-    private OnRatingListener onRatingListener;
-    private Object bindObject;
+    private OnRatingChangeListener onRatingChangeListener;
     private float starImageSize;
     private Drawable starEmptyDrawable;
     private Drawable starFillDrawable;
 
-
-    public void setBindObject(Object bindObject) {
-        this.bindObject = bindObject;
-    }
-
-    public void setOnRatingListener(OnRatingListener onRatingListener) {
-        this.onRatingListener = onRatingListener;
+    public void setOnRatingChangeListener(OnRatingChangeListener onRatingChangeListener) {
+        this.onRatingChangeListener = onRatingChangeListener;
     }
 
     public void setmClickable(boolean clickable) {
@@ -44,10 +34,6 @@ public class RatingBar extends LinearLayout {
 
     public void setStarEmptyDrawable(Drawable starEmptyDrawable) {
         this.starEmptyDrawable = starEmptyDrawable;
-    }
-
-    public void setStarCount(int startCount) {
-        this.starCount = starCount;
     }
 
     public void setStarImageSize(float starImageSize) {
@@ -76,8 +62,8 @@ public class RatingBar extends LinearLayout {
                         public void onClick(View v) {
                             if (mClickable) {
                                 setStar(indexOfChild(v) + 1);
-                                if (onRatingListener != null) {
-                                    onRatingListener.onRating(bindObject, indexOfChild(v) + 1);
+                                if (onRatingChangeListener != null) {
+                                    onRatingChangeListener.onRatingChange(indexOfChild(v) + 1);
                                 }
                             }
 
@@ -130,9 +116,9 @@ public class RatingBar extends LinearLayout {
     /**
      * change stat listener
      */
-    public interface OnRatingListener {
+    public interface OnRatingChangeListener {
 
-        void onRating(Object bindObject, int RatingCount);
+        void onRatingChange(int RatingCount);
 
     }
 
