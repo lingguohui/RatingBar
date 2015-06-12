@@ -2,6 +2,11 @@
 ##android中一个评分的控件
 ![image](https://github.com/hedge-hog/RatingBar/blob/master/ic_demo.png)
 # 如何使用
+###Android Studio下：
+dependencies {
+    compile 'com.hedgehog.ratingbar:app:1.0.2'
+}
+
 ###1，在XML中
     <com.hedgehog.ratingbar.RatingBar
         android:layout_marginTop="50dp"
@@ -18,15 +23,22 @@
         />
 ###注意：别忘了命名空间
 
+ xmlns:hedgehog="http://schemas.android.com/apk/res-auto"
+ 
 ###2，在java代码中
 
-        RatingBar mRatingBar= (RatingBar) findViewById(R.id.ratingbar);
-        mRatingBar.setOnRatingListener(
-                new RatingBar.OnRatingListener() {
+       RatingBar mRatingBar = (RatingBar) findViewById(R.id.ratingbar);
+        mRatingBar.setOnRatingChangeListener(
+                new RatingBar.OnRatingChangeListener() {
                     @Override
-                    public void onRating(Object bindObject, int RatingCount) {
-                        Toast.makeText(MainActivity.this,"fill start is"+RatingCount,Toast.LENGTH_LONG).show();
+                    public void onRatingChange(int RatingCount) {
+                            Toast.makeText(MainActivity.this,"the fill star is"+RatingCount,Toast.LENGTH_LONG).show();
                     }
                 }
         );
+       mRatingBar.setStar(5);
+       mRatingBar.setmClickable(true);
+       mRatingBar.setStarImageSize(16f);
+       mRatingBar.setStarEmptyDrawable(getResources().getDrawable(R.mipmap.ic_star_empty));
+       mRatingBar.setStarFillDrawable(getResources().getDrawable(R.mipmap.ic_star_fill));
 
