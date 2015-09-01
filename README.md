@@ -48,12 +48,14 @@
     所以打算用一个开源的，可是并没有找到称心如意的
     然后发现了这个
     
-    * [Android_custom_ratingbarview](https://github.com/JackWong025/Android_custom_ratingbarview) 
+    * [Android_custom_ratingbarview][1]
     
     在他的基础上做了些许修改后发布
     而且让使用Android Studio的同学更加容易引入，不用在这个小东西上浪费时间
     同时我也学习了如何用Android Studio发布开源项目到Jcenter
 ###最后
     感谢JackWong的开源项目
+    
+    [1]:https://github.com/JackWong025/Android_custom_ratingbarview
 
     
