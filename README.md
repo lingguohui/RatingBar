@@ -50,8 +50,8 @@ xmlns:hedgehog="http://schemas.android.com/apk/res-auto"
 
 [Android_custom_ratingbarview][1]
     
-可以说是照搬这个项目的，在它的基础上做了些许修改后发布，而且让使用AndroidStudio的同学更加容易引入，不用在这个小东西上浪费时间，同时我也学习了如何发布开源项目到Github
+RatingBar可以说是照搬上边这个项目的，只是在它的基础上做了一丢丢修改后发布，而且让使用AndroidStudio的同学更加容易引入，不用在这个小东西上浪费时间，同时我也学习了如何发布开源项目到Github
 ###最后
-真心感谢[JackWong的开源项目][1]大家可以去他那里点赞
+真心感谢[JackWong的开源项目][1]大家想感谢的话也去他那里点赞，毕竟代码都是他的！
 
 [1]:https://github.com/JackWong025/Android_custom_ratingbarview
