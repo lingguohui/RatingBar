@@ -25,7 +25,7 @@
         />
 ###注意：别忘了命名空间
 ```
-    xmlns:hedgehog="http://schemas.android.com/apk/res-auto"
+xmlns:hedgehog="http://schemas.android.com/apk/res-auto"
 ```
 ###2，在java代码中
 
@@ -44,18 +44,14 @@
        mRatingBar.setStarEmptyDrawable(getResources().getDrawable(R.mipmap.ic_star_empty));
        mRatingBar.setStarFillDrawable(getResources().getDrawable(R.mipmap.ic_star_fill));
 ###关于
-    因为项目中需要，但是android本身对这个控件的支持并不是很好
-    所以打算用一个开源的，可是并没有找到称心如意的
-    然后发现了这个  
-    
-    > [Android_custom_ratingbarview][1]
-    
-    在他的基础上做了些许修改后发布
-    而且让使用Android Studio的同学更加容易引入，不用在这个小东西上浪费时间
-    同时我也学习了如何用Android Studio发布开源项目到Jcenter
-###最后
-    [感谢JackWong的开源项目][1]
-    
-    [1]:https://github.com/JackWong025/Android_custom_ratingbarview
+因为项目中需要，但是android本身对这个控件的支持并不是很好
+所以打算用一个开源的，可是并没有找到称心如意的
+然后发现了这个  
 
+[Android_custom_ratingbarview][1]
     
+可以说是照搬这个项目的，在它的基础上做了些许修改后发布，而且让使用AndroidStudio的同学更加容易引入，不用在这个小东西上浪费时间，同时我也学习了如何发布开源项目到Github
+###最后
+真心感谢[JackWong的开源项目][1]大家可以去他那里点赞
+
+[1]:https://github.com/JackWong025/Android_custom_ratingbarview
