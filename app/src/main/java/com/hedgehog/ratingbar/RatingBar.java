@@ -9,8 +9,14 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import java.math.BigDecimal;
+
 /**
  * Created by hedge_hog on 2015/6/11.
+ *
+ * add halfstar show
+ *
+ * Correction clickEvent from Xml
  */
 public class RatingBar extends LinearLayout {
     private boolean mClickable;
@@ -19,6 +25,12 @@ public class RatingBar extends LinearLayout {
     private float starImageSize;
     private Drawable starEmptyDrawable;
     private Drawable starFillDrawable;
+    private Drawable starHalfDrawable;
+
+    public void setStarHalfDrawable(Drawable starHalfDrawable) {
+        this.starHalfDrawable = starHalfDrawable;
+    }
+
 
     public void setOnRatingChangeListener(OnRatingChangeListener onRatingChangeListener) {
         this.onRatingChangeListener = onRatingChangeListener;
@@ -53,7 +65,7 @@ public class RatingBar extends LinearLayout {
         starCount = mTypedArray.getInteger(R.styleable.RatingBar_starCount, 5);
         starEmptyDrawable = mTypedArray.getDrawable(R.styleable.RatingBar_starEmpty);
         starFillDrawable = mTypedArray.getDrawable(R.styleable.RatingBar_starFill);
-        mClickable = mTypedArray.getBoolean(1,false);
+        mClickable=mTypedArray.getBoolean(R.styleable.RatingBar_clickable,true);
         for (int i = 0; i < starCount; ++i) {
             ImageView imageView = getStarImageView(context, attrs);
             imageView.setOnClickListener(
@@ -94,21 +106,49 @@ public class RatingBar extends LinearLayout {
 
     }
 
+
     /**
      * setting start
      *
      * @param starCount
      */
-    public void setStar(int starCount) {
-        starCount = starCount > this.starCount ? this.starCount : starCount;
+
+    public void setStar(float starCount) {
+
+        //浮点数的整数部分
+        int fint = (int) starCount;
+        BigDecimal b1 = new BigDecimal(Float.toString(starCount));
+        BigDecimal b2 = new BigDecimal(Integer.toString(fint));
+        //浮点数的小数部分
+        float fPoint = b1.subtract(b2).floatValue();
+
+
+        starCount = fint > this.starCount ? this.starCount : fint;
         starCount = starCount < 0 ? 0 : starCount;
+
+        //drawfullstar
         for (int i = 0; i < starCount; ++i) {
             ((ImageView) getChildAt(i)).setImageDrawable(starFillDrawable);
         }
 
-        for (int i = this.starCount - 1; i >= starCount; --i) {
-            ((ImageView) getChildAt(i)).setImageDrawable(starEmptyDrawable);
+        //drawhalfstar
+        if (fPoint > 0) {
+            ((ImageView) getChildAt(fint)).setImageDrawable(starHalfDrawable);
+
+            //drawemptystar
+            for (int i = this.starCount - 1; i >= starCount + 1; --i) {
+                ((ImageView) getChildAt(i)).setImageDrawable(starEmptyDrawable);
+            }
+
+
+        } else {
+            //drawemptystar
+            for (int i = this.starCount - 1; i >= starCount; --i) {
+                ((ImageView) getChildAt(i)).setImageDrawable(starEmptyDrawable);
+            }
+
         }
+
 
     }
 
